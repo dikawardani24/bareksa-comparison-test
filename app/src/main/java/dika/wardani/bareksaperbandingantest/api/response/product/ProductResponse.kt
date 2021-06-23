@@ -1,10 +1,6 @@
 package dika.wardani.bareksaperbandingantest.api.response.product
 
 import com.google.gson.annotations.SerializedName
-import dika.wardani.bareksaperbandingantest.model.Product
-import dika.wardani.bareksaperbandingantest.model.ReksaDanaType
-import dika.wardani.bareksaperbandingantest.model.RiskLevel
-import dika.wardani.bareksaperbandingantest.util.date.ext.parseToDate
 import java.math.BigInteger
 
 data class ProductResponse(
@@ -24,8 +20,6 @@ data class ProductResponse(
     val danaKelolaan: BigInteger,
     @SerializedName("min_pembelian")
     val minPembelian: BigInteger,
-    @SerializedName("min_pembelian_unit")
-    val minPembelianUnit: String,
     @SerializedName("jangka_waktu")
     val jangkaWaktu: Int,
     @SerializedName("jangka_waktu_periode_unit")

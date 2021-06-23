@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/_10sdp"
+    tools:context=".ui.perbandingan.PerbandinganFragment">
+
+    <include
+        android:id="@+id/component_app_bar"
+        layout="@layout/component_app_bar_with_back_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_bar_height" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/imbal_hasil_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/imbal_hasil" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/dana_kelolaan_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dana_kelolaan" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/perbandingan_vpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+</LinearLayout>

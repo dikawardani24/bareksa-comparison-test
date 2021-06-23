@@ -3,6 +3,7 @@ package dika.wardani.bareksaperbandingantest
 import android.app.Application
 import dika.wardani.bareksaperbandingantest.api.ApiModule
 import dika.wardani.bareksaperbandingantest.repository.RepositoryModule
+import dika.wardani.bareksaperbandingantest.ui.UIModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -19,7 +20,8 @@ class BareksaApp: Application() {
             androidContext(this@BareksaApp)
             modules(
                 ApiModule.get(),
-                RepositoryModule.get()
+                RepositoryModule.get(),
+                UIModule.get()
             )
         }
     }

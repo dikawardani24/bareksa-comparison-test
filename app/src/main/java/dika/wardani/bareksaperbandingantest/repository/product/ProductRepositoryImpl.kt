@@ -30,34 +30,36 @@ class ProductRepositoryImpl(
                 Product(
                     id = productResponse.id,
                     danaKelolaan = productResponse.danaKelolaan,
-                    jangkaWaktu = productResponse.jangkaWaktu,
-                    jangkaWaktuPeriodeUnit = productResponse.jangkaWaktuPeriodeUnit,
-                    minPembelian = productResponse.minPembelian,
-                    minPembelianUnit = productResponse.minPembelianUnit,
                     name = productResponse.name,
                     tglPeluncuran = productResponse.tglPeluncuran.parseToDate() ?: throw DateException("No date has been received for tgl peluncurean"),
                     tingkatRisiko = RiskLevel.toRiskLevel(productResponse.tingkatRisiko),
-                    type = ReksaDanaType.toReksaDanaType(productResponse.jenis),
-                    imbalHasil = ImbalHasil(
-                        imbal = productResponse.imbal,
+                    type = ProductType.toReksaDanaType(productResponse.jenis),
+                    imbalHasilAverage = ImbalHasilAverage(
+                        percentage = productResponse.imbal,
                         periode = productResponse.imbalPeriode,
-                        unit = ImbalHasilPeriodeUnit.from(productResponse.imbalPeriodeUnit)
-                    )
+                        unit = TimeUnit.from(productResponse.imbalPeriodeUnit)
+                    ),
+                    jangkaWaktu = JangkaWaktu(
+                        tempo = productResponse.jangkaWaktu,
+                        unit = TimeUnit.from(productResponse.jangkaWaktuPeriodeUnit)
+                    ),
+                    minPembelian = productResponse.minPembelian
                 )
             }
         }
     }
 
 
-    override fun getImbalHasilComparisons(
-        productIds: List<Int>,
+    override fun getImbalHasilHistoryComparisons(
+        products: List<Product>,
         periode: Int,
-        imbalHasilPeriodeUnit: ImbalHasilPeriodeUnit
+        timeUnit: TimeUnit
     ): Single<List<ImbalHasil>> {
+        val productIds = products.map { it.id }
         val request = GetImbalHasilComparisonReq(
             periode = periode,
+            periodeUnit = timeUnit.code,
             productIds = productIds,
-            periodeUnit = imbalHasilPeriodeUnit.code
         )
 
         val requestInJson = request.toJson()
@@ -68,10 +70,12 @@ class ProductRepositoryImpl(
             val imbalHasilComparisonRes = getImbalHasilComparisonRes.imbalHasils
 
             imbalHasilComparisonRes.map { imbalHasilRes ->
+                val product = products.first { imbalHasilRes.productId == it.id }
+
                 ImbalHasil(
-                    imbal = imbalHasilRes.imbal,
-                    unit = imbalHasilPeriodeUnit,
-                    periode = getImbalHasilComparisonRes.periode
+                    product = product,
+                    percentage = imbalHasilRes.imbal,
+                    date = imbalHasilRes.date.parseToDate()?: throw DateException("Unable to parse date on imbal hasil date")
                 )
             }
         }

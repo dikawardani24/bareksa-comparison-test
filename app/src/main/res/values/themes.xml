@@ -13,4 +13,37 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="Theme.BareksaPerbandinganTest.H6" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">@font/montserrat_header</item>
+        <item name="android:textSize">20sp</item>
+        <item name="lineHeight">26dp</item>
+    </style>
+
+    <style name="Theme.BareksaPerbandinganTest.Caption" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="fontFamily">@font/montserrat_body</item>
+        <item name="android:textSize">12sp</item>
+        <item name="lineHeight">16dp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Theme.BareksaPerbandinganTest.Subtitle2Medium" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="fontFamily">@font/montserrat_header</item>
+        <item name="android:textSize">14sp</item>
+        <item name="lineHeight">18dp</item>
+        <item name="android:textColor">@color/surface_dark</item>
+    </style>
+
+    <style name="Theme.BareksaPerbandinganTest.Button" parent="Widget.MaterialComponents.Button">
+        <item name="fontFamily">@font/montserrat_header</item>
+        <item name="android:textSize">14sp</item>
+        <item name="lineHeight">18dp</item>
+    </style>
+
+    <style name="Theme.BareksaPerbandinganTest.OutlinedButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="fontFamily">@font/montserrat_header</item>
+        <item name="android:textSize">14sp</item>
+        <item name="lineHeight">18dp</item>
+    </style>
+
 </resources>

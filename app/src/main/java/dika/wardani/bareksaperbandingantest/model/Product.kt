@@ -3,14 +3,14 @@ package dika.wardani.bareksaperbandingantest.model
 import java.math.BigInteger
 import java.util.*
 
-enum class ReksaDanaType(val value: String) {
+enum class ProductType(val value: String) {
     SAHAM("Saham"),
     PASAR_UANG("Pasar Uang"),
     CAMPURAN("Campuran"),
     UNKNOWN("-");
 
     companion object {
-        fun toReksaDanaType(value: String): ReksaDanaType {
+        fun toReksaDanaType(value: String): ProductType {
             var found = UNKNOWN
 
             for (type in values()) {
@@ -46,14 +46,14 @@ enum class RiskLevel(val value: String) {
     }
 }
 
-enum class ImbalHasilPeriodeUnit(val code: Char, val description: String) {
+enum class TimeUnit(val code: Char, val description: String) {
     WEEK('W', "Week"),
     MONTH('M', "Month"),
     YEAR('Y', "Year"),
     UNKNOWN('-', "Unknown");
 
     companion object {
-        fun from(code: Char): ImbalHasilPeriodeUnit {
+        fun from(code: Char): TimeUnit {
             var found = UNKNOWN
 
             for(unit in values()) {
@@ -66,7 +66,7 @@ enum class ImbalHasilPeriodeUnit(val code: Char, val description: String) {
             return found
         }
 
-        fun from(description: String): ImbalHasilPeriodeUnit {
+        fun from(description: String): TimeUnit {
             var found = UNKNOWN
 
             for(unit in values()) {
@@ -82,21 +82,30 @@ enum class ImbalHasilPeriodeUnit(val code: Char, val description: String) {
 }
 
 data class ImbalHasil(
-    val imbal: Int,
+    val product: Product,
+    val percentage: Double,
+    val date: Date
+)
+
+data class ImbalHasilAverage(
+    val percentage: Int,
     val periode: Int,
-    val unit: ImbalHasilPeriodeUnit,
+    val unit: TimeUnit,
+)
+
+data class JangkaWaktu(
+    val tempo: Int,
+    val unit: TimeUnit
 )
 
 data class Product(
     val id: Int,
     val name: String,
-    val type: ReksaDanaType,
-    val imbalHasil: ImbalHasil,
+    val type: ProductType,
+    val imbalHasilAverage: ImbalHasilAverage,
     val danaKelolaan: BigInteger,
     val minPembelian: BigInteger,
-    val minPembelianUnit: String,
-    val jangkaWaktu: Int,
-    val jangkaWaktuPeriodeUnit: String,
+    val jangkaWaktu: JangkaWaktu,
     val tingkatRisiko: RiskLevel,
     val tglPeluncuran: Date
 )

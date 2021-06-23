@@ -6,5 +6,7 @@ data class ImbalHasilRes(
     @SerializedName("product_id")
     val productId: Int,
     @SerializedName("imbal")
-    val imbal: Int
+    val imbal: Double,
+    @SerializedName("date")
+    val date: String
 )
