@@ -9,7 +9,7 @@ object ApiModule {
     fun get(): Module {
         return module {
             single { ApiClient() }
-            single { get(ApiClient::class.java).createEndPoint(get(), ProductEndpoint::class.java) }
+            single { get(ApiClient::class.java).createEndPoint(ProductEndpoint::class.java) }
         }
     }
 

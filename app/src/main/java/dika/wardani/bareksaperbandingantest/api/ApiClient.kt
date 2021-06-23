@@ -76,7 +76,7 @@ class ApiClient {
         return this
     }
 
-    private fun initializeRetrofit(context: Context): Retrofit {
+    private fun initializeRetrofit(): Retrofit {
         if (BuildConfig.DEBUG) {
             val interceptor = HttpLoggingInterceptor().apply { level = HttpLoggingInterceptor.Level.BODY }
 
@@ -97,10 +97,10 @@ class ApiClient {
             .build()
     }
 
-    fun<T> createEndPoint(context: Context, apiInterfaceClass: Class<T>): T {
+    fun<T> createEndPoint(apiInterfaceClass: Class<T>): T {
         var currentRetrofit = retrofit
         if (currentRetrofit == null) {
-            currentRetrofit = initializeRetrofit(context)
+            currentRetrofit = initializeRetrofit()
             retrofit = currentRetrofit
         }
 
