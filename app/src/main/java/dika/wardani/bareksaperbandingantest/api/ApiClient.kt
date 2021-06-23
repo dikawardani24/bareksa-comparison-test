@@ -16,7 +16,7 @@ import javax.net.ssl.SSLSocketFactory
 import javax.net.ssl.X509TrustManager
 
 class ApiClient {
-    private val baseUrl = ""
+    private val baseUrl = "https://my-json-server.typicode.com/dikawardani24"
     private var retrofit: Retrofit? = null
     private val okHttpClientBuilder = OkHttpClient.Builder()
 
