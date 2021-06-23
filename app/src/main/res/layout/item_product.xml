@@ -1,365 +1,368 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginStart="6dp"
-    android:layout_marginEnd="6dp"
-    android:orientation="vertical">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView1"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="122dp"
-        android:layout_marginTop="16dp"
-        app:cardBackgroundColor="@color/green_50"
-        app:cardCornerRadius="4dp"
-        app:cardElevation="0dp">
+        android:layout_height="match_parent"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        android:orientation="vertical">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="12dp">
+            android:layout_height="122dp"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="@color/green_50"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="0dp">
 
-            <ImageView
-                android:id="@+id/ivLogo"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/ic_logo_product_1"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="ContentDescription" />
-
-            <TextView
-                android:id="@+id/textViewInitials"
-                style="@style/Theme.BareksaPerbandinganTest.Subtitle2Medium"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="@id/ivLogo"
-                app:layout_constraintEnd_toEndOf="@id/ivLogo"
-                app:layout_constraintStart_toStartOf="@id/ivLogo"
-                app:layout_constraintTop_toTopOf="@id/ivLogo"
-                tools:text="A" />
-
-            <TextView
-                android:id="@+id/textViewProductName"
-                style="@style/TextAppearance.AppCompat.Caption"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginTop="12dp"
-                android:ellipsize="end"
-                android:maxLines="3"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/ivLogo"
-                tools:text="BNI-AM Inspiring Equity Fund" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
-
-    <TextView
-        style="@style/TextAppearance.AppCompat.Caption"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/jenis_reksa_dana"
-        android:textColor="@color/onsurface_mediumemphasis" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView2"
-        android:layout_width="match_parent"
-        android:layout_height="32dp"
-        android:layout_marginTop="8dp"
-        app:cardBackgroundColor="@color/green_50"
-        app:cardCornerRadius="4dp"
-        app:cardElevation="0dp">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="8dp">
-
-            <TextView
-                android:id="@+id/textViewProductType"
-                style="@style/TextAppearance.AppCompat.Caption"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:ellipsize="end"
-                android:maxLines="1"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="Saham" />
+                android:orientation="vertical"
+                android:padding="12dp">
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
+                <ImageView
+                    android:id="@+id/ivLogo"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_logo_product_1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
 
-    <TextView
-        style="@style/TextAppearance.AppCompat.Caption"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@string/imbal_hasil"
-        android:textColor="@color/onsurface_mediumemphasis" />
+                <TextView
+                    android:id="@+id/textViewInitials"
+                    style="@style/Theme.BareksaPerbandinganTest.Subtitle2Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@id/ivLogo"
+                    app:layout_constraintEnd_toEndOf="@id/ivLogo"
+                    app:layout_constraintStart_toStartOf="@id/ivLogo"
+                    app:layout_constraintTop_toTopOf="@id/ivLogo"
+                    tools:text="A" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView3"
-        android:layout_width="match_parent"
-        android:layout_height="32dp"
-        android:layout_marginTop="8dp"
-        app:cardBackgroundColor="@color/green_50"
-        app:cardCornerRadius="4dp"
-        app:cardElevation="0dp">
+                <TextView
+                    android:id="@+id/textViewProductName"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="12dp"
+                    android:ellipsize="end"
+                    android:maxLines="3"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ivLogo"
+                    tools:text="BNI-AM Inspiring Equity Fund" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Caption"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="8dp">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/jenis_reksa_dana"
+            android:textColor="@color/onsurface_mediumemphasis" />
 
-            <TextView
-                android:id="@+id/textViewYield"
-                style="@style/Theme.BareksaPerbandinganTest.Caption"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            app:cardBackgroundColor="@color/green_50"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:ellipsize="end"
-                android:maxLines="1"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="5,50% / 5 thn" />
+                android:orientation="vertical"
+                android:padding="8dp">
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
+                <TextView
+                    android:id="@+id/textViewProductType"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Saham" />
 
-    <TextView
-        style="@style/Theme.BareksaPerbandinganTest.Caption"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@string/dana_kelolaan"
-        android:textColor="@color/onsurface_mediumemphasis" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView4"
-        android:layout_width="match_parent"
-        android:layout_height="32dp"
-        android:layout_marginTop="8dp"
-        app:cardBackgroundColor="@color/green_50"
-        app:cardCornerRadius="4dp"
-        app:cardElevation="0dp">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <TextView
+            style="@style/TextAppearance.AppCompat.Caption"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="8dp">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/imbal_hasil"
+            android:textColor="@color/onsurface_mediumemphasis" />
 
-            <TextView
-                android:id="@+id/textViewManagedFunds"
-                style="@style/Theme.BareksaPerbandinganTest.Caption"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView3"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            app:cardBackgroundColor="@color/green_50"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:ellipsize="end"
-                android:maxLines="1"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="3,64 Miliar" />
+                android:orientation="vertical"
+                android:padding="8dp">
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
+                <TextView
+                    android:id="@+id/textViewYield"
+                    style="@style/Theme.BareksaPerbandinganTest.Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="5,50% / 5 thn" />
 
-    <TextView
-        style="@style/Theme.BareksaPerbandinganTest.Caption"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@string/min_pembelian"
-        android:textColor="@color/onsurface_mediumemphasis" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView5"
-        android:layout_width="match_parent"
-        android:layout_height="32dp"
-        android:layout_marginTop="8dp"
-        app:cardBackgroundColor="@color/green_50"
-        app:cardCornerRadius="4dp"
-        app:cardElevation="0dp">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <TextView
+            style="@style/Theme.BareksaPerbandinganTest.Caption"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="8dp">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/dana_kelolaan"
+            android:textColor="@color/onsurface_mediumemphasis" />
 
-            <TextView
-                android:id="@+id/textViewMinimumPurchase"
-                style="@style/Theme.BareksaPerbandinganTest.Caption"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView4"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            app:cardBackgroundColor="@color/green_50"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:ellipsize="end"
-                android:maxLines="1"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="1 Juta" />
+                android:orientation="vertical"
+                android:padding="8dp">
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
+                <TextView
+                    android:id="@+id/textViewManagedFunds"
+                    style="@style/Theme.BareksaPerbandinganTest.Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="3,64 Miliar" />
 
-    <TextView
-        style="@style/Theme.BareksaPerbandinganTest.Caption"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@string/jangka_waktu"
-        android:textColor="@color/onsurface_mediumemphasis" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView6"
-        android:layout_width="match_parent"
-        android:layout_height="32dp"
-        android:layout_marginTop="8dp"
-        app:cardBackgroundColor="@color/green_50"
-        app:cardCornerRadius="4dp"
-        app:cardElevation="0dp">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <TextView
+            style="@style/Theme.BareksaPerbandinganTest.Caption"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="8dp">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/min_pembelian"
+            android:textColor="@color/onsurface_mediumemphasis" />
 
-            <TextView
-                android:id="@+id/textViewTimePeriod"
-                style="@style/Theme.BareksaPerbandinganTest.Caption"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView5"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            app:cardBackgroundColor="@color/green_50"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:ellipsize="end"
-                android:maxLines="1"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="5 Tahun" />
+                android:orientation="vertical"
+                android:padding="8dp">
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
+                <TextView
+                    android:id="@+id/textViewMinimumPurchase"
+                    style="@style/Theme.BareksaPerbandinganTest.Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="1 Juta" />
 
-    <TextView
-        style="@style/Theme.BareksaPerbandinganTest.Caption"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@string/tingkat_risiko"
-        android:textColor="@color/onsurface_mediumemphasis" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView7"
-        android:layout_width="match_parent"
-        android:layout_height="32dp"
-        android:layout_marginTop="8dp"
-        app:cardBackgroundColor="@color/green_50"
-        app:cardCornerRadius="4dp"
-        app:cardElevation="0dp">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <TextView
+            style="@style/Theme.BareksaPerbandinganTest.Caption"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="8dp">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/jangka_waktu"
+            android:textColor="@color/onsurface_mediumemphasis" />
 
-            <TextView
-                android:id="@+id/textViewRiskLevel"
-                style="@style/Theme.BareksaPerbandinganTest.Caption"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView6"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            app:cardBackgroundColor="@color/green_50"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:ellipsize="end"
-                android:maxLines="1"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="Tinggi" />
+                android:orientation="vertical"
+                android:padding="8dp">
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
+                <TextView
+                    android:id="@+id/textViewTimePeriod"
+                    style="@style/Theme.BareksaPerbandinganTest.Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="5 Tahun" />
 
-    <TextView
-        style="@style/Theme.BareksaPerbandinganTest.Caption"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@string/peluncuran"
-        android:textColor="@color/onsurface_mediumemphasis" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView8"
-        android:layout_width="match_parent"
-        android:layout_height="32dp"
-        android:layout_marginTop="8dp"
-        app:cardBackgroundColor="@color/green_50"
-        app:cardCornerRadius="4dp"
-        app:cardElevation="0dp">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <TextView
+            style="@style/Theme.BareksaPerbandinganTest.Caption"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="8dp">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/tingkat_risiko"
+            android:textColor="@color/onsurface_mediumemphasis" />
 
-            <TextView
-                android:id="@+id/textViewLaunching"
-                style="@style/Theme.BareksaPerbandinganTest.Caption"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView7"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            app:cardBackgroundColor="@color/green_50"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:ellipsize="end"
-                android:maxLines="1"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="16 Apr 2014" />
+                android:orientation="vertical"
+                android:padding="8dp">
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
+                <TextView
+                    android:id="@+id/textViewRiskLevel"
+                    style="@style/Theme.BareksaPerbandinganTest.Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Tinggi" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/buttonDetail"
-        style="@style/Theme.BareksaPerbandinganTest.OutlinedButton"
-        android:layout_width="match_parent"
-        android:layout_height="36dp"
-        android:layout_marginTop="24dp"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
-        android:text="@string/detail"
-        android:textAllCaps="false"
-        android:textColor="@color/primary_800"
-        app:strokeColor="@color/primary_800" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/buttonBuy"
-        style="@style/Theme.BareksaPerbandinganTest.Button"
-        android:layout_width="match_parent"
-        android:layout_height="36dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginBottom="16dp"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
-        android:text="@string/beli"
-        android:textAllCaps="false"
-        android:textColor="@color/onsurface_highemphasis"
-        app:backgroundTint="@color/primary_500" />
+        <TextView
+            style="@style/Theme.BareksaPerbandinganTest.Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/peluncuran"
+            android:textColor="@color/onsurface_mediumemphasis" />
 
-</LinearLayout>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView8"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            app:cardBackgroundColor="@color/green_50"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/textViewLaunching"
+                    style="@style/Theme.BareksaPerbandinganTest.Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="16 Apr 2014" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonDetail"
+            style="@style/Theme.BareksaPerbandinganTest.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginTop="24dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="@string/detail"
+            android:textAllCaps="false"
+            android:textColor="@color/primary_800"
+            app:strokeColor="@color/primary_800" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonBuy"
+            style="@style/Theme.BareksaPerbandinganTest.Button"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="16dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="@string/beli"
+            android:textAllCaps="false"
+            android:textColor="@color/onsurface_highemphasis"
+            app:backgroundTint="@color/primary_500" />
+
+    </LinearLayout>
+</layout>
