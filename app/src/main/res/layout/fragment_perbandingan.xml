@@ -14,35 +14,16 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/app_bar_height" />
 
-        <androidx.appcompat.widget.LinearLayoutCompat
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="@dimen/_10sdp">
+            android:layout_height="wrap_content"/>
 
-            <com.google.android.material.tabs.TabLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <com.google.android.material.tabs.TabItem
-                    android:id="@+id/imbal_hasil_tab"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/imbal_hasil" />
-
-                <com.google.android.material.tabs.TabItem
-                    android:id="@+id/dana_kelolaan_tab"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/dana_kelolaan" />
-
-            </com.google.android.material.tabs.TabLayout>
-
-            <androidx.viewpager2.widget.ViewPager2
-                android:id="@+id/perbandingan_vpager"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1" />
-        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/perbandingan_vpager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/surface_dark"
+            android:layout_weight="1" />
     </LinearLayout>
 </layout>

@@ -6,17 +6,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
+import com.google.android.material.tabs.TabLayoutMediator
 import dika.wardani.bareksaperbandingantest.R
 import dika.wardani.bareksaperbandingantest.databinding.FragmentPerbandinganBinding
-import org.koin.android.ext.android.bind
-import org.koin.android.ext.android.inject
 
 class PerbandinganFragment : Fragment() {
     private lateinit var binding: FragmentPerbandinganBinding
 
     private fun goBack() {
-        findNavController().popBackStack()
+        requireActivity().finish()
     }
 
     private fun initView() {
@@ -25,6 +23,14 @@ class PerbandinganFragment : Fragment() {
                 titleTv.text = getString(R.string.fg_perbandingan_title)
                 backBtn.setOnClickListener { goBack() }
             }
+
+            perbandinganVpager.adapter = PerbandinganViewPagerAdapter(requireActivity())
+            TabLayoutMediator(tabLayout, perbandinganVpager) {tab, pos ->
+                when(pos) {
+                    0 -> tab.setText(R.string.imbal_hasil)
+                    1 -> tab.setText(R.string.dana_kelolaan)
+                }
+            }.attach()
         }
     }
 
