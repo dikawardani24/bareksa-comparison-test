@@ -9,5 +9,5 @@ interface ProductRepository {
 
     fun getProductComparisons(productIds: List<Int>): Single<List<Product>>
 
-    fun getImbalHasilHistoryComparisons(productIds: List<Product>, periode: Int, timeUnit: TimeUnit): Single<List<ImbalHasil>>
+    fun getImbalHasilHistoryComparisons(products: List<Product>, periode: Int, timeUnit: TimeUnit): Single<List<ImbalHasil>>
 }
